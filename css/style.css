@@ -1,0 +1,9 @@
+body{
+    background-color: red;
+}
+
+.timer{
+    border-radius:50%;
+    border-style: solid;
+    border-color: black;
+}
