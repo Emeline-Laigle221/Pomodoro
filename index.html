@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
@@ -17,14 +18,18 @@
         </div>
 
         <div id="timer">
-            <p id="minutes">25</p>
-            <p id="separation">:</p>
-            <p id="secondes">00</p>
+            <div class="circle">
+                <div class="time">
+                    <p id="minutes">25</p>
+                    <p id="separation">:</p>
+                    <p id="secondes">00</p>
+                </div>
+            </div>
         </div>
 
         <div id="bouton">
-            <button id="start" aria-label="start">Start</button>
-            <button id="reset" aria-label="reset">Reset</button>
+            <button id="start" aria-label="start"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+            <button id="reset" aria-label="reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
         </div>
     </main>
 </body>
