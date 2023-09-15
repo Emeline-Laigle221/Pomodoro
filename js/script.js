@@ -1,6 +1,6 @@
 
- let tempsTravail = 40 ;
- let tempsPause = 5 ;
+ let tempsTravail = 2 ;
+ let tempsPause = 1;
  let secondes= "00";
  let boutonStart = document.getElementById("start");
  let boutonReset = document.getElementById("reset");
@@ -10,6 +10,10 @@
  boutonStart.addEventListener('click',()=>{
     demarage();
  });
+
+ boutonReset.addEventListener('click',()=>{
+    location.reload();
+ })
 
  //affichage
 
@@ -22,6 +26,9 @@
  //fonction start 
 
  function demarage(){
+    boutonStart.style.display="none";
+    boutonReset.style.display="block";
+
     secondes=59;
 
     let tempsMinutes=tempsTravail-1;
@@ -45,8 +52,10 @@
                     boutonPause.classList.add('active');
                 }
                 else{
-                    tempsMinutes=tempsTravail;
+                    tempsMinutes=tempsTravail-1;
                     comptepause=comptepause+1;
+                    boutonTravail.classList.add('active');
+                    boutonPause.classList.remove('active');
                 }
             }
             secondes=59;

@@ -115,4 +115,6 @@ section{
 
 .bouton #reset{
     display: none;
+    background-color: transparent;
+    border:none;
 }
