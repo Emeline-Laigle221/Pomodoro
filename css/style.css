@@ -103,7 +103,7 @@ section{
     margin-inline: 1rem;
 }
 
-.boutton{
+.bouton{
     margin-top: 3rem;
 }
 
@@ -111,10 +111,8 @@ section{
     border: none;
     background-color: transparent;
     cursor: pointer;
-    margin: 5rem;
 }
 
 .bouton #reset{
     display: none;
-    margin: 5rem;
 }
