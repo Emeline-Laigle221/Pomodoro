@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <section>
+    <section class="contenu">
         <div class="container">
             <h1>Timer Pomodoro</h1>
             <div class="panel">
@@ -31,7 +31,12 @@
                 <button id="reset" aria-label="reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
             </div>
         </div>
+        
     </section>
+    <div class="curseur">
+        <input id="valeurtravail" type="number" min="0" max="40" step="1" value="25" size="6">
+        <input id="valeurpause" type="number" min="0" max="40" step="1" value="5" size="6">
+    </div>
 
     <!---SCRIPT JS-->
     <script src="./js/script.js"></script>

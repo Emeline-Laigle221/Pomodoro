@@ -1,11 +1,29 @@
-
- let tempsTravail = 2 ;
- let tempsPause = 1;
+ let valeurTravail=document.getElementById("valeurtravail");
+ let valeurPause=document.getElementById("valeurpause");
+ let tempsTravail=valeurTravail.value;
+ let tempsPause = valeurPause.value;
  let secondes= "00";
  let boutonStart = document.getElementById("start");
  let boutonReset = document.getElementById("reset");
  let boutonTravail=document.getElementById("travail");
  let boutonPause=document.getElementById("pause");
+
+ valeurTravail.addEventListener('keydown',()=>{
+    location.reload();
+ })
+
+ valeurTravail.addEventListener('click',()=>{
+    location.reload();
+ })
+
+ valeurPause.addEventListener('keydown',()=>{
+    location.reload();
+ })
+
+ valeurPause.addEventListener('click',()=>{
+    location.reload();
+ })
+
 
  boutonStart.addEventListener('click',()=>{
     demarage();
@@ -15,11 +33,19 @@
     location.reload();
  })
 
+
+ //fonction ajoute les zéro devant 
+
+ function affichagePropre(temps){
+    let tempsString=temps.toString();
+    tempsString = tempsString.length < 2 ? '0' + tempsString : tempsString;
+    return tempsString;
+ }
  //affichage
 
  window.onload= ()=>{
-    document.getElementById("minutes").textContent=tempsTravail;
-    document.getElementById("secondes").textContent=secondes;
+    document.getElementById("minutes").textContent= affichagePropre(tempsTravail);
+    document.getElementById("secondes").textContent=affichagePropre(secondes);
     boutonTravail.classList.add('active');
  }
 
@@ -37,8 +63,8 @@
     comptepause=0;
 
     let timerFunction=()=>{
-        document.getElementById("minutes").textContent=tempsMinutes;
-        document.getElementById("secondes").textContent=secondes;
+        document.getElementById("minutes").textContent=affichagePropre(tempsMinutes);
+        document.getElementById("secondes").textContent=affichagePropre(secondes);
 
         secondes=secondes-1;
 
