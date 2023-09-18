@@ -37,6 +37,8 @@ h1{
 
 section{
     display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     align-items: center;
     height:92.5%;
 }
@@ -120,6 +122,16 @@ section{
     border:none;
 }
 
+
+.changementValeur{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 250px;
+    margin: auto ;
+    padding:100px;
+
+}
 
 
 

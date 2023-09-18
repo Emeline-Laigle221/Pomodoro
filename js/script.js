@@ -76,12 +76,14 @@
                     comptepause=comptepause+1;
                     boutonTravail.classList.remove('active');
                     boutonPause.classList.add('active');
+                    document.body.style.backgroundColor= "rgb(50,205,50)";
                 }
                 else{
                     tempsMinutes=tempsTravail-1;
                     comptepause=comptepause+1;
                     boutonTravail.classList.add('active');
                     boutonPause.classList.remove('active');
+                    document.body.style.backgroundColor= "#DC143C";
                 }
             }
             secondes=59;
