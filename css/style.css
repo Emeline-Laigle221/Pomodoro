@@ -4,7 +4,6 @@
     --color-secondary:yellow;
     --color-font:white;
     --color-shadow: #FFD700;
-
 }
 
 *{
@@ -133,7 +132,7 @@ section{
 }
 
 label{
-    color: var(--color-shadow);
+    color: white;
 }
 
 
