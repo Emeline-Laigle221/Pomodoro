@@ -2,24 +2,32 @@
  
  let valeurTravail=document.getElementById("valeurtravail");
  let valeurPause=document.getElementById("valeurpause");
- let tempsTravail=valeurTravail.value;
- let tempsPause = valeurPause.value;
  let secondes= "00";
  let boutonStart = document.getElementById("start");
  let boutonReset = document.getElementById("reset");
  let boutonTravail=document.getElementById("travail");
  let boutonPause=document.getElementById("pause");
+ let envoyer=document.getElementById("envoyer");
+
+
+if(localStorage.getItem("valeurTravail")==""){
+   localStorage.setItem("valeurTravail", 25);
+}
+if(localStorage.getItem("valeurPause")==""){
+   localStorage.setItem("valeurPause", 5);
+}
+
+valeurTravail.value=localStorage.getItem("valeurTravail");
+valeurPause.value=localStorage.getItem("valeurPause");
+
 
 // Rechargement de la page lorsque les champs de saisie sont cliqués
 
- valeurTravail.addEventListener('keydown',()=>{
-    location.reload();
- })
 
-
-
- valeurPause.addEventListener('keydown',()=>{
-    location.reload();
+ envoyer.addEventListener('click',()=>{
+   localStorage.setItem("valeurTravail",valeurTravail.value);
+   localStorage.setItem("valeurPause",valeurPause.value);
+   location.reload;
  })
 
 
@@ -46,7 +54,7 @@
 // Action lors du chargement de la page
 
  window.onload= ()=>{
-    document.getElementById("minutes").textContent= affichagePropre(tempsTravail);
+    document.getElementById("minutes").textContent= affichagePropre(localStorage.getItem("valeurTravail"));
     document.getElementById("secondes").textContent=affichagePropre(secondes);
     boutonTravail.classList.add('active');
  }
@@ -59,8 +67,8 @@
 
     secondes=59; // Initialisation des secondes à 59
 
-    let tempsMinutes=tempsTravail-1;
-    let pauseMinutes=tempsPause-1;
+    let tempsMinutes=localStorage.getItem("valeurTravail")-1;
+    let pauseMinutes=localStorage.getItem("valeurPause")-1;
 
     comptepause=0; 
 
@@ -74,14 +82,14 @@
             tempsMinutes= tempsMinutes-1;
             if(tempsMinutes==-1){
                 if(comptepause%2==0){
-                    tempsMinutes=pauseMinutes;
+                    tempsMinutes=localStorage.getItem("valeurPause")-1;
                     comptepause=comptepause+1;
                     boutonTravail.classList.remove('active'); // Désactive le bouton "Travail"
                     boutonPause.classList.add('active'); // Active le bouton "Pause"
                     document.body.style.backgroundColor= "rgb(50,205,50)"; // Change la couleur de fond
                 }
                 else{
-                    tempsMinutes=tempsTravail-1;
+                    tempsMinutes=localStorage.getItem("valeurTravail")-1;
                     comptepause=comptepause+1;
                     boutonTravail.classList.add('active'); // Active le bouton "Travail"
                     boutonPause.classList.remove('active'); // Désactive le bouton "Pause"
@@ -93,7 +101,7 @@
     }
 
     // Répétition de la fonction pour le décompte toutes les 1000 ms (1 seconde)
-    setInterval(timerFunction, 1000);
+    setInterval(timerFunction, 100);
 
  }
 
