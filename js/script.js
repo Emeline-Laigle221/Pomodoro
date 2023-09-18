@@ -8,17 +8,13 @@
  let boutonTravail=document.getElementById("travail");
  let boutonPause=document.getElementById("pause");
 
- valeurTravail.addEventListener('keydown',()=>{
-    location.reload();
- })
+
 
  valeurTravail.addEventListener('click',()=>{
     location.reload();
  })
 
- valeurPause.addEventListener('keydown',()=>{
-    location.reload();
- })
+
 
  valeurPause.addEventListener('click',()=>{
     location.reload();
@@ -91,7 +87,7 @@
     }
 
     //Répétition de la fonction pour le décompte
-    setInterval(timerFunction, 1000);
+    setInterval(timerFunction, 100);
 
  }
 
