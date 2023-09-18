@@ -87,7 +87,7 @@
     }
 
     //Répétition de la fonction pour le décompte
-    setInterval(timerFunction, 100);
+    setInterval(timerFunction, 1000);
 
  }
 
