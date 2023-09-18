@@ -2,12 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <!-- Configure la vue initiale pour les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+    <!-- Inclut la bibliothèque Font Awesome pour les icônes -->
     <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+    <!-- Précharge les polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lie la police Google "Open Sans" -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Lie le fichier CSS externe pour la mise en forme -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
@@ -15,6 +20,7 @@
         <div class="container">
             <h1>Timer Pomodoro</h1>
             <div class="panel">
+                <!-- Deux paragraphes pour indiquer le mode de travail ou de pause -->
                 <p id="travail" >Travail</p>
                 <p id="pause">pause</p>
             </div>
@@ -22,6 +28,7 @@
             <div class="timer">
                 <div class="circle">
                     <div class="time">
+                         <!-- Affichage des minutes, séparation, et secondes du minuteur -->
                         <p id="minutes"></p>
                         <p id="separation">:</p>
                         <p id="secondes"></p>
@@ -30,6 +37,7 @@
             </div>
 
             <div class="bouton">
+                <!-- Boutons pour démarrer et réinitialiser le minuteur -->
                 <button id="start" aria-label="start"><i class="fa-solid fa-play"></i></button>
                 <button id="reset" aria-label="reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
             </div>
@@ -37,15 +45,16 @@
         <div class="changementValeur">
             <form>
             <div class="curseur">
-                <label for="valeurtravail">temps travail</label><input id="valeurtravail" type="number" min="1" max="40" step="1" value="25" >
-                <label for="valeurpause">temps pause</label><input id="valeurpause" type="number" min="1" max="40" step="1" value="5" >
+                <!-- Champs de saisie numériques pour définir la durée de travail et de pause -->
+                <label for="valeurtravail">temps travail :  </label><input id="valeurtravail" type="number" min="1" max="40" step="1" value="25" >
+                <label for="valeurpause">temps pause :  </label><input id="valeurpause" type="number" min="1" max="40" step="1" value="5" >
             </div>
         </form>
         </div>
     </section>
     
 
-    <!---SCRIPT JS-->
+    <!-- Inclut le script JavaScript externe -->
     <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+/* Définition des variables de couleur et de taille de police globales */
+
 :root{
     font-size: 62.5%;
     --color-primary:#DC143C;
@@ -6,11 +8,15 @@
     --color-shadow: #FFD700;
 }
 
+/* Réinitialisation des marges et des paddings pour tous les éléments */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
+/* Style global pour HTML et le corps de la page */
 
 html, body{
     background-color: var(--color-primary);
@@ -18,6 +24,7 @@ html, body{
     font-family: 'Open sans' ;
 }
 
+/* Style pour les paragraphes, italiques et titres */
 
 p,i,h1{
     color:var(--color-font)
@@ -33,6 +40,8 @@ h1{
 
 /*contenu*/
 
+
+/* Style pour la section principale du contenu */
 section{
     display:flex;
     flex-wrap: nowrap;
@@ -41,6 +50,7 @@ section{
     height:92.5%;
 }
 
+/* Style pour le conteneur principal */
 
 .container{
     width:min(42.5rem,100%);
@@ -51,6 +61,9 @@ section{
     align-items: center;
     flex-direction: column;
 }
+
+/* Style pour le panneau contenant "Travail" et "Pause" */
+
 
 .panel{
     display: grid;
@@ -64,16 +77,22 @@ section{
     box-shadow: 0px 0px 15px 10px var(--color-shadow);
 }
 
+/* Style pour les paragraphes dans le panneau */
+
 .panel p{
     opacity: .8;
     transition: 1s ease-in;
 }
+
+/* Style pour les paragraphes actifs dans le panneau */
 
 .panel p.active{
     opacity:1;
     color: var(--color-secondary);
 
 }
+
+/* Style pour le minuteur circulaire */
 
 .timer{
     display: flex;
@@ -86,7 +105,7 @@ section{
     box-shadow: 0px 0px 15px 10px var(--color-shadow);
 }
 
-
+/* Style pour le contenu du minuteur (affichage des minutes et des secondes) */
 
 .time{
     position: relative;
@@ -94,15 +113,21 @@ section{
     flex-direction: row;
 }
 
+/* Style pour les éléments de temps (minutes et secondes) dans le minuteur */
+
 .time p{
     font-size: 4rem;
 }
+
+/* Style pour le séparateur entre les minutes et les secondes dans le minuteur */
 
 .time p:nth-of-type(2){
     position: relative;
     top: -.5rem;
     margin-inline: 1rem;
 }
+
+/* Style pour les boutons de démarrage et de réinitialisation */
 
 .bouton{
     margin-top: 3rem;
@@ -120,16 +145,14 @@ section{
     border:none;
 }
 
+/* Style pour la div de changement de valeurs (saisie numérique) */
 
 .changementValeur{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 250px;
     margin: auto ;
     padding:100px;
-
 }
+
+/* Style pour les libellés */
 
 label{
     color: white;
