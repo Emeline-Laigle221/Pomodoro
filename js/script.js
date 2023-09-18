@@ -10,10 +10,10 @@
  let envoyer=document.getElementById("envoyer");
 
 
-if(localStorage.getItem("valeurTravail")==""){
+if(localStorage.getItem("valeurTravail")=="" || localStorage.getItem("valeurTravail")==null ){
    localStorage.setItem("valeurTravail", 25);
 }
-if(localStorage.getItem("valeurPause")==""){
+if(localStorage.getItem("valeurPause")==""|| localStorage.getItem("valeurPause")==null){
    localStorage.setItem("valeurPause", 5);
 }
 
