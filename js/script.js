@@ -12,13 +12,13 @@
 
 // Rechargement de la page lorsque les champs de saisie sont cliqués
 
- valeurTravail.addEventListener('click',()=>{
+ valeurTravail.addEventListener('keydown',()=>{
     location.reload();
  })
 
 
 
- valeurPause.addEventListener('click',()=>{
+ valeurPause.addEventListener('keydown',()=>{
     location.reload();
  })
 
