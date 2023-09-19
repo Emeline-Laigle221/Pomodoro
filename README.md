@@ -11,5 +11,5 @@ Pour utiliser cette application, il suffit de saisir le temps de travail et de p
 Ce projet a été effectuée dans le contexte de ma deuxième année de BUT Informatique, lors du projet guidée par MR VALLOT Christophe.
 
 ## Remerciements
-Je souhaite remercier Maxime JOBART pour son aide sur mon projet.
+Je souhaite remercier Maxime JOBARD pour son aide sur mon projet.
 
