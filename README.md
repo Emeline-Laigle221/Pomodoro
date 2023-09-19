@@ -13,3 +13,7 @@ Ce projet a été effectuée dans le contexte de ma deuxième année de BUT Info
 ## Remerciements
 Je souhaite remercier Maxime JOBARD pour son aide sur mon projet.
 
+## Autrice 
+
+Ce projet a été réalisé par Emeline LAIGLE étudiante en deuxième année de BUT Informatique au Campus 3 d'IFS. 
+
