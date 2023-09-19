@@ -25,8 +25,10 @@ valeurPause.value=localStorage.getItem("valeurPause");
 
 
  envoyer.addEventListener('click',()=>{
-   localStorage.setItem("valeurTravail",valeurTravail.value);
-   localStorage.setItem("valeurPause",valeurPause.value);
+   localStorage.setItem("valeurTravail",parseInt(valeurTravail.value));
+   localStorage.setItem("valeurPause",parseInt(valeurPause.value));
+   valeurTravail.value=localStorage.getItem("valeurTravail");
+   valeurPause.value=localStorage.getItem("valeurPause");
    location.reload;
  })
 
@@ -78,7 +80,7 @@ valeurPause.value=localStorage.getItem("valeurPause");
 
         secondes=secondes-1;
 
-        if(secondes==0){
+        if(secondes==-1){
             tempsMinutes= tempsMinutes-1;
             if(tempsMinutes==-1){
                 if(comptepause%2==0){
@@ -101,7 +103,7 @@ valeurPause.value=localStorage.getItem("valeurPause");
     }
 
     // Répétition de la fonction pour le décompte toutes les 1000 ms (1 seconde)
-    setInterval(timerFunction, 100);
+    setInterval(timerFunction, 1000);
 
  }
 
