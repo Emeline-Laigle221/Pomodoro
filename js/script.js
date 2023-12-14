@@ -103,7 +103,7 @@ valeurPause.value=localStorage.getItem("valeurPause");
     }
 
     // Répétition de la fonction pour le décompte toutes les 1000 ms (1 seconde)
-    setInterval(timerFunction, 100000);
+    setInterval(timerFunction, 10000000);
 
  }
 
